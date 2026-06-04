@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= project.title %> - <%= site.logo %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<%- include('partials/styles') %>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="<%= rootPrefix %>index.html" class="logo"><%= site.logo %></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="<%= rootPrefix %>index.html#home">Home</a></li>
+                    <li><a href="<%= rootPrefix %>index.html#about">About</a></li>
+                    <li><a href="<%= rootPrefix %>index.html#portfolio">Portfolio</a></li>
+                    <li><a href="<%= rootPrefix %>index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="project-hero-content fade-in-up">
+            <a href="<%= rootPrefix %>index.html#portfolio" class="back-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Back to Portfolio
+            </a>
+            <span class="card-category"><%= project.category %></span>
+            <h1><%= project.title %></h1>
+            <% if (project.detail && project.detail.intro) { %>
+            <p class="project-intro"><%= project.detail.intro %></p>
+            <% } %>
+        </div>
+    </section>
+
+    <!-- Project Body -->
+    <section class="project-body-section">
+        <% if (project.detail && project.detail.heroImage) { %>
+        <div class="project-figure">
+            <img src="<%= project.detail.heroImage %>" alt="<%= project.cardImageAlt || project.title %>">
+        </div>
+        <% } %>
+        <div class="project-body">
+            <%- (project.detail && project.detail.bodyHtml) ? project.detail.bodyHtml : '' %>
+        </div>
+        <% if (project.detail && project.detail.externalLink) { %>
+        <div class="project-external">
+            <a href="<%= project.detail.externalLink %>" target="_blank" class="btn btn-primary">View Full Project</a>
+        </div>
+        <% } %>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <% footer.lines.forEach(function(line) { %>
+        <p><%= line %></p>
+        <% }); %>
+    </footer>
+</body>
+</html>

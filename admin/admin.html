@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Trisha Halder Portfolio</title>
+  <link rel="stylesheet" href="/admin/admin.css" />
+  <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <span class="brand">Portfolio Admin</span>
+      <span id="status" class="status"></span>
+    </div>
+    <div class="topbar-actions">
+      <a href="/" target="_blank" class="btn btn-ghost">View Site</a>
+      <button id="save-btn" class="btn btn-secondary" type="button">Save</button>
+      <button id="publish-btn" class="btn btn-primary" type="button">Save &amp; Publish</button>
+      <button id="logout-btn" class="btn btn-ghost" type="button">Logout</button>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-tab="hero" type="button">Hero / Bio</button>
+    <button class="tab" data-tab="about" type="button">About Me</button>
+    <button class="tab" data-tab="portfolio" type="button">Portfolio</button>
+    <button class="tab" data-tab="contact" type="button">Contact</button>
+  </nav>
+
+  <main class="content">
+    <!-- HERO -->
+    <section class="panel active" data-panel="hero">
+      <h2>Hero / Bio</h2>
+      <label>Heading (your name line)
+        <input type="text" id="hero-name" />
+      </label>
+      <label>Subtitle
+        <input type="text" id="hero-subtitle" />
+      </label>
+      <label>Bio / Description
+        <textarea id="hero-description" rows="5"></textarea>
+      </label>
+      <div class="row">
+        <label>Primary button label
+          <input type="text" id="hero-primary-label" />
+        </label>
+        <label>Primary button link
+          <input type="text" id="hero-primary-href" />
+        </label>
+      </div>
+      <div class="row">
+        <label>Secondary button label
+          <input type="text" id="hero-secondary-label" />
+        </label>
+        <label>Secondary button link
+          <input type="text" id="hero-secondary-href" />
+        </label>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="panel" data-panel="about">
+      <h2>About Me</h2>
+      <label>Heading
+        <input type="text" id="about-heading" />
+      </label>
+      <label>Tagline
+        <input type="text" id="about-tagline" />
+      </label>
+      <label>Profile image
+        <input type="text" id="about-image" placeholder="Image URL" />
+      </label>
+      <div class="image-upload">
+        <img id="about-image-preview" class="img-preview" alt="" />
+        <input type="file" id="about-image-file" accept="image/*" />
+      </div>
+      <label>Image alt text
+        <input type="text" id="about-image-alt" />
+      </label>
+
+      <h3>Paragraphs</h3>
+      <div id="about-paragraphs" class="repeater"></div>
+      <button class="btn btn-secondary" id="add-paragraph" type="button">+ Add paragraph</button>
+
+      <h3>Skill tags</h3>
+      <div id="about-skills" class="tag-repeater"></div>
+      <button class="btn btn-secondary" id="add-skill" type="button">+ Add skill</button>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="panel" data-panel="portfolio">
+      <h2>Portfolio</h2>
+      <label>Section heading
+        <input type="text" id="portfolio-heading" />
+      </label>
+      <label>Section subheading
+        <input type="text" id="portfolio-subheading" />
+      </label>
+
+      <div class="portfolio-toolbar">
+        <h3>Projects</h3>
+        <button class="btn btn-primary" id="add-project" type="button">+ Add Project</button>
+      </div>
+      <div id="project-list" class="project-list"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="panel" data-panel="contact">
+      <h2>Contact</h2>
+      <label>Heading
+        <input type="text" id="contact-heading" />
+      </label>
+      <label>Subtext
+        <input type="text" id="contact-subtext" />
+      </label>
+      <label>Email
+        <input type="text" id="contact-email" />
+      </label>
+      <div class="row">
+        <label>WhatsApp number (display)
+          <input type="text" id="contact-whatsapp" />
+        </label>
+        <label>WhatsApp link
+          <input type="text" id="contact-whatsapp-link" />
+        </label>
+      </div>
+      <label>Instagram URL
+        <input type="text" id="contact-instagram" />
+      </label>
+      <label>LinkedIn URL
+        <input type="text" id="contact-linkedin" />
+      </label>
+
+      <h3>Footer lines</h3>
+      <div id="footer-lines" class="repeater"></div>
+      <button class="btn btn-secondary" id="add-footer-line" type="button">+ Add footer line</button>
+    </section>
+  </main>
+
+  <!-- PROJECT DETAIL MODAL -->
+  <div id="project-modal" class="modal" hidden>
+    <div class="modal-card">
+      <div class="modal-head">
+        <h2 id="modal-title">Edit Project</h2>
+        <button class="modal-close" id="modal-close" type="button">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <label>Title
+            <input type="text" id="p-title" />
+          </label>
+          <label>Category
+            <input type="text" id="p-category" list="category-list" />
+            <datalist id="category-list">
+              <option value="Copywriting"></option>
+              <option value="SEO Content"></option>
+              <option value="YouTube Optimization"></option>
+              <option value="YouTube Video"></option>
+              <option value="Email Marketing"></option>
+              <option value="Social Media"></option>
+              <option value="Marketing Campaign"></option>
+              <option value="Content Strategy"></option>
+            </datalist>
+          </label>
+        </div>
+        <label>Card description (shown on the card)
+          <textarea id="p-description" rows="2"></textarea>
+        </label>
+
+        <label>Card image
+          <input type="text" id="p-card-image" placeholder="Image URL" />
+        </label>
+        <div class="image-upload">
+          <img id="p-card-image-preview" class="img-preview" alt="" />
+          <input type="file" id="p-card-image-file" accept="image/*" />
+        </div>
+        <label>Card image alt text
+          <input type="text" id="p-card-image-alt" />
+        </label>
+
+        <hr />
+        <h3>View Project detail page</h3>
+        <label>Intro (shown under the title)
+          <textarea id="p-detail-intro" rows="2"></textarea>
+        </label>
+        <label>Detail hero image
+          <input type="text" id="p-detail-hero" placeholder="Image URL (optional)" />
+        </label>
+        <div class="image-upload">
+          <img id="p-detail-hero-preview" class="img-preview" alt="" />
+          <input type="file" id="p-detail-hero-file" accept="image/*" />
+        </div>
+        <label>Full content</label>
+        <div id="p-detail-editor"></div>
+        <label>Optional external link (Google Doc, Drive, etc.)
+          <input type="text" id="p-detail-external" placeholder="https://..." />
+        </label>
+      </div>
+      <div class="modal-foot">
+        <button class="btn btn-ghost" id="modal-cancel" type="button">Cancel</button>
+        <button class="btn btn-primary" id="modal-apply" type="button">Apply</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+  <script src="/admin/admin.js"></script>
+</body>
+</html>

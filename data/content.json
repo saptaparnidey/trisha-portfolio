@@ -1,0 +1,268 @@
+{
+  "site": {
+    "title": "Trisha Halder - Content & SEO Writer Portfolio",
+    "logo": "Trisha Halder"
+  },
+  "hero": {
+    "name": "Hi! I am Trisha",
+    "subtitle": "Content Writer based in Bangalore",
+    "description": "I help write compelling content with proper keywords so they can rank on Google pages. As a dedicated and versatile content writer with a strong background in English Literature, I bring a rich understanding of language and storytelling to every project. My experience spans academic content, SEO content, and blog writing, allowing me to create compelling and optimized materials that engage diverse audiences.",
+    "primaryBtn": {
+      "label": "View My Work",
+      "href": "#portfolio"
+    },
+    "secondaryBtn": {
+      "label": "Get In Touch",
+      "href": "#contact"
+    }
+  },
+  "about": {
+    "heading": "About Me",
+    "tagline": "Crafting Words That Rank & Resonate",
+    "image": "https://customer-assets.emergentagent.com/job_content-creator-hub-202/artifacts/bhjg4n88_Screenshot%202026-05-30%20at%201.41.32%E2%80%AFPM.png",
+    "imageAlt": "Trisha Halder",
+    "paragraphs": [
+      "With a strong foundation in English Literature, I specialize in creating content that not only engages readers but also performs exceptionally well in search rankings. My approach combines creative storytelling with strategic SEO implementation.",
+      "Currently, I'm looking forward to expanding my expertise in copywriting and content marketing, continuously learning and creating value through every project I undertake."
+    ],
+    "skills": [
+      "SEO Writing",
+      "Blog Content",
+      "Copywriting",
+      "Content Strategy",
+      "Email Marketing",
+      "Social Media"
+    ]
+  },
+  "portfolio": {
+    "heading": "My Portfolio",
+    "subheading": "A showcase of my content creation across various formats and industries",
+    "projects": [
+      {
+        "id": "unicef-campaign",
+        "slug": "unicef-campaign",
+        "category": "Copywriting",
+        "title": "UNICEF Campaign",
+        "description": "Impactful copywriting for a humanitarian cause, focusing on emotional connection and call-to-action.",
+        "cardImage": "https://images.pexels.com/photos/8378728/pexels-photo-8378728.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "cardImageAlt": "UNICEF Children Campaign",
+        "detail": {
+          "heroImage": "https://images.pexels.com/photos/8378728/pexels-photo-8378728.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          "intro": "Impactful copywriting for a humanitarian cause, focusing on emotional connection and call-to-action.",
+          "bodyHtml": "<p>This project showcases copywriting for a UNICEF children's campaign. Replace this text with the full case study, samples, and results.</p>",
+          "externalLink": ""
+        }
+      },
+      {
+        "id": "krispy-kreme-copy",
+        "slug": "krispy-kreme-copy",
+        "category": "Copywriting",
+        "title": "Food & Beverage Copy",
+        "description": "Appetizing and engaging copy for food products, designed to drive sales and brand affinity.",
+        "cardImage": "https://images.pexels.com/photos/2955820/pexels-photo-2955820.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "cardImageAlt": "Krispy Kreme Donuts",
+        "detail": {
+          "heroImage": "https://images.pexels.com/photos/2955820/pexels-photo-2955820.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          "intro": "Appetizing and engaging copy for food products, designed to drive sales and brand affinity.",
+          "bodyHtml": "<p>Appetizing copy written for food and beverage brands. Replace this text with the full case study and samples.</p>",
+          "externalLink": ""
+        }
+      },
+      {
+        "id": "youtube-optimization",
+        "slug": "youtube-optimization",
+        "category": "YouTube Optimization",
+        "title": "Video Content Strategy",
+        "description": "SEO-optimized video titles, descriptions, and tags to maximize YouTube reach and engagement.",
+        "cardImage": "https://images.pexels.com/photos/5081930/pexels-photo-5081930.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "cardImageAlt": "YouTube Optimization Swiggy",
+        "detail": {
+          "heroImage": "https://images.pexels.com/photos/5081930/pexels-photo-5081930.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          "intro": "SEO-optimized video titles, descriptions, and tags to maximize YouTube reach and engagement.",
+          "bodyHtml": "<p>YouTube optimization work including titles, descriptions, and tags. Replace this text with the full case study.</p>",
+          "externalLink": ""
+        }
+      },
+      {
+        "id": "youtube-video",
+        "slug": "youtube-video",
+        "category": "YouTube Video",
+        "title": "Video Content Creation",
+        "description": "Complete video content project including scripting, optimization, and engagement strategies.",
+        "cardImage": "https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "cardImageAlt": "Headspace Meditation Video",
+        "detail": {
+          "heroImage": "https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          "intro": "Complete video content project including scripting, optimization, and engagement strategies.",
+          "bodyHtml": "<p>End-to-end video content creation including scripting and optimization. Replace this text with the full case study.</p>",
+          "externalLink": ""
+        }
+      },
+      {
+        "id": "email-marketing",
+        "slug": "email-marketing",
+        "category": "Email Marketing",
+        "title": "Email Campaign Content",
+        "description": "Conversion-focused email marketing campaigns including abandoned cart recovery strategies.",
+        "cardImage": "https://images.pexels.com/photos/4348078/pexels-photo-4348078.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "cardImageAlt": "Email Marketing",
+        "detail": {
+          "heroImage": "https://images.pexels.com/photos/4348078/pexels-photo-4348078.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          "intro": "Conversion-focused email marketing campaigns including abandoned cart recovery strategies.",
+          "bodyHtml": "<p>Conversion-focused email marketing campaigns. Replace this text with the full case study and samples.</p>",
+          "externalLink": ""
+        }
+      },
+      {
+        "id": "instagram-marketing",
+        "slug": "instagram-marketing",
+        "category": "Social Media",
+        "title": "Instagram Content Strategy",
+        "description": "Engaging social media content and marketing strategies for Instagram Reels and posts.",
+        "cardImage": "https://images.pexels.com/photos/3756879/pexels-photo-3756879.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "cardImageAlt": "Audible Audiobook",
+        "detail": {
+          "heroImage": "https://images.pexels.com/photos/3756879/pexels-photo-3756879.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          "intro": "Engaging social media content and marketing strategies for Instagram Reels and posts.",
+          "bodyHtml": "<p>Social media content strategy for Instagram Reels and posts. Replace this text with the full case study.</p>",
+          "externalLink": ""
+        }
+      },
+      {
+        "id": "airbnb-campaign",
+        "slug": "airbnb-campaign",
+        "category": "Marketing Campaign",
+        "title": "Topical Marketing Content",
+        "description": "Strategic marketing campaign content leveraging current trends and topical relevance.",
+        "cardImage": "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "cardImageAlt": "Airbnb Travel Home",
+        "detail": {
+          "heroImage": "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          "intro": "Strategic marketing campaign content leveraging current trends and topical relevance.",
+          "bodyHtml": "<p>Strategic, topical marketing campaign content. Replace this text with the full case study.</p>",
+          "externalLink": ""
+        }
+      },
+      {
+        "id": "starbucks-strategy",
+        "slug": "starbucks-strategy",
+        "category": "Content Strategy",
+        "title": "Content Strategy Presentation",
+        "description": "Comprehensive content strategy and marketing plan with detailed implementation roadmap.",
+        "cardImage": "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "cardImageAlt": "Starbucks Coffee Strategy",
+        "detail": {
+          "heroImage": "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          "intro": "Comprehensive content strategy and marketing plan with detailed implementation roadmap.",
+          "bodyHtml": "<p>A comprehensive content strategy and marketing plan. Replace this text with the full case study.</p>",
+          "externalLink": ""
+        }
+      },
+      {
+        "id": "seo-blog-shane-gillis",
+        "slug": "seo-blog-shane-gillis",
+        "category": "SEO Content",
+        "title": "Entertainment SEO Article",
+        "description": "In-depth, keyword-optimized blog on entertainment & celebrity topics that rank on Google.",
+        "cardImage": "https://images.pexels.com/photos/2747448/pexels-photo-2747448.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "cardImageAlt": "Stand-up Comedy SEO",
+        "detail": {
+          "heroImage": "https://images.pexels.com/photos/2747448/pexels-photo-2747448.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          "intro": "In-depth, keyword-optimized blog on entertainment & celebrity topics that rank on Google.",
+          "bodyHtml": "<p>In-depth, keyword-optimized entertainment article. Replace this text with the full article or a link to it.</p>",
+          "externalLink": ""
+        }
+      },
+      {
+        "id": "seo-blog-israel-travel",
+        "slug": "seo-blog-israel-travel",
+        "category": "SEO Content",
+        "title": "Travel Guide SEO",
+        "description": "Family travel guide to Israel with strategic keyword placement for travel search intent.",
+        "cardImage": "https://images.pexels.com/photos/2087391/pexels-photo-2087391.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "cardImageAlt": "Israel Travel SEO",
+        "detail": {
+          "heroImage": "https://images.pexels.com/photos/2087391/pexels-photo-2087391.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          "intro": "Family travel guide to Israel with strategic keyword placement for travel search intent.",
+          "bodyHtml": "<p>A family travel guide optimized for travel search intent. Replace this text with the full article or a link to it.</p>",
+          "externalLink": ""
+        }
+      },
+      {
+        "id": "seo-blog-prison-school",
+        "slug": "seo-blog-prison-school",
+        "category": "SEO Content",
+        "title": "Anime & Entertainment Blog",
+        "description": "Anime fandom content with deep cultural insights and SEO best practices for niche audiences.",
+        "cardImage": "https://images.pexels.com/photos/2070033/pexels-photo-2070033.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "cardImageAlt": "Anime SEO Content",
+        "detail": {
+          "heroImage": "https://images.pexels.com/photos/2070033/pexels-photo-2070033.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          "intro": "Anime fandom content with deep cultural insights and SEO best practices for niche audiences.",
+          "bodyHtml": "<p>Anime fandom content with cultural insights and SEO best practices. Replace this text with the full article or a link to it.</p>",
+          "externalLink": ""
+        }
+      },
+      {
+        "id": "seo-blog-cassasse",
+        "slug": "seo-blog-cassasse",
+        "category": "SEO Content",
+        "title": "Food & Culture Guide",
+        "description": "Comprehensive guide on traditional cuisine with optimized structure and engaging narrative.",
+        "cardImage": "https://images.pexels.com/photos/1639565/pexels-photo-1639565.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "cardImageAlt": "Caribbean Cuisine SEO",
+        "detail": {
+          "heroImage": "https://images.pexels.com/photos/1639565/pexels-photo-1639565.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          "intro": "Comprehensive guide on traditional cuisine with optimized structure and engaging narrative.",
+          "bodyHtml": "<p>A comprehensive guide on traditional cuisine. Replace this text with the full article or a link to it.</p>",
+          "externalLink": ""
+        }
+      },
+      {
+        "id": "seo-blog-geekzilla",
+        "slug": "seo-blog-geekzilla",
+        "category": "SEO Content",
+        "title": "Tech Podcast Review",
+        "description": "Engaging podcast review content with strategic SEO and tech-savvy audience engagement focus.",
+        "cardImage": "https://images.pexels.com/photos/3784221/pexels-photo-3784221.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "cardImageAlt": "Podcast SEO",
+        "detail": {
+          "heroImage": "https://images.pexels.com/photos/3784221/pexels-photo-3784221.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          "intro": "Engaging podcast review content with strategic SEO and tech-savvy audience engagement focus.",
+          "bodyHtml": "<p>An engaging tech podcast review optimized for SEO. Replace this text with the full article or a link to it.</p>",
+          "externalLink": ""
+        }
+      },
+      {
+        "id": "seo-blog-gaming",
+        "slug": "seo-blog-gaming",
+        "category": "SEO Content",
+        "title": "Gaming Guide & Tech Tips",
+        "description": "Gaming-focused SEO content covering controller settings, tips, and tech how-to guides.",
+        "cardImage": "https://images.pexels.com/photos/371924/pexels-photo-371924.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "cardImageAlt": "Gaming Controller SEO",
+        "detail": {
+          "heroImage": "https://images.pexels.com/photos/371924/pexels-photo-371924.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          "intro": "Gaming-focused SEO content covering controller settings, tips, and tech how-to guides.",
+          "bodyHtml": "<p>Gaming-focused SEO content with how-to guides. Replace this text with the full article or a link to it.</p>",
+          "externalLink": ""
+        }
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Let's Work Together",
+    "subtext": "Ready to create compelling content that ranks and resonates? Get in touch!",
+    "email": "trishahalder2024@gmail.com",
+    "whatsapp": "+91 7584828887",
+    "whatsappLink": "https://wa.me/7584828887",
+    "instagram": "https://www.instagram.com/the_weirdopath",
+    "linkedin": "http://www.linkedin.com/in/trisha-halder-137268301"
+  },
+  "footer": {
+    "lines": [
+      "© 2024 Trisha Halder. All rights reserved.",
+      "Let's work together towards success!"
+    ]
+  }
+}

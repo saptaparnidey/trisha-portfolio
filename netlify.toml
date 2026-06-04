@@ -1,0 +1,17 @@
+# Netlify configuration for the generated static portfolio site.
+#
+# The admin panel (Express server) is NOT deployed here. We only publish the
+# pre-generated static output in dist/. Regenerate it locally with
+# "npm run publish-site" (or the admin panel's Publish button) before deploying.
+
+[build]
+  # Folder that gets uploaded as the live site.
+  publish = "dist"
+  # No build runs on Netlify; dist/ is generated locally and uploaded as-is.
+  command = ""
+
+# Send unknown paths to a simple 404 instead of breaking navigation.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404

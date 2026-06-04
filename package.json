@@ -1,0 +1,37 @@
+{
+  "name": "trisha-portfolio",
+  "version": "1.0.0",
+  "description": "Content-managed portfolio site for Trisha Halder with a private admin panel and static site generator.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node scripts/start.js",
+    "stop": "node scripts/stop.js",
+    "restart": "node scripts/stop.js && node scripts/start.js",
+    "start:fg": "node server.js",
+    "publish-site": "node scripts/publish.js",
+    "set-password": "node scripts/set-password.js",
+    "netlify-login": "netlify login",
+    "netlify-link": "netlify link",
+    "deploy": "npm run publish-site && netlify deploy --prod --dir=dist",
+    "deploy:draft": "npm run publish-site && netlify deploy --dir=dist"
+  },
+  "keywords": [
+    "portfolio",
+    "cms",
+    "static-site-generator"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.4.2",
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "multer": "^2.1.1"
+  },
+  "devDependencies": {
+    "netlify-cli": "^26.1.0"
+  }
+}

@@ -300,7 +300,11 @@
     el('p-detail-intro').value = detail.intro || '';
     el('p-detail-hero').value = detail.heroImage || '';
     el('p-detail-hero-preview').src = detail.heroImage || '';
-    el('p-detail-external').value = detail.externalLink || '';
+
+    var work = detail.work || {};
+    el('p-work-type').value = work.type || '';
+    el('p-work-url').value = work.url || '';
+    el('p-work-file-name').textContent = '';
 
     ensureQuill();
     quill.root.innerHTML = detail.bodyHtml || '';
@@ -324,8 +328,16 @@
     p.detail = p.detail || {};
     p.detail.intro = el('p-detail-intro').value;
     p.detail.heroImage = el('p-detail-hero').value;
-    p.detail.externalLink = el('p-detail-external').value;
     p.detail.bodyHtml = quill ? quill.root.innerHTML : p.detail.bodyHtml;
+
+    var workType = el('p-work-type').value;
+    var workUrl = el('p-work-url').value.trim();
+    if (workType && workUrl) {
+      p.detail.work = { type: workType, url: workUrl };
+    } else {
+      delete p.detail.work;
+    }
+    p.detail.externalLink = '';
     renderProjects();
     closeProjectModal();
   }
@@ -474,6 +486,36 @@
     bindUpload('about-image-file', 'about-image', 'about-image-preview');
     bindUpload('p-card-image-file', 'p-card-image', 'p-card-image-preview');
     bindUpload('p-detail-hero-file', 'p-detail-hero', 'p-detail-hero-preview');
+
+    el('p-work-file').addEventListener('change', function (e) {
+      var file = e.target.files[0];
+      if (!file) return;
+      setStatus('Uploading work file...', '');
+      el('p-work-file-name').textContent = 'Uploading ' + file.name + '...';
+      var fd = new FormData();
+      fd.append('file', file);
+      fetch('/api/upload-file', { method: 'POST', body: fd })
+        .then(function (res) {
+          if (!res.ok) {
+            return res.json().then(function (d) {
+              throw new Error(d.error || 'Upload failed');
+            });
+          }
+          return res.json();
+        })
+        .then(function (d) {
+          el('p-work-url').value = d.url;
+          el('p-work-file-name').textContent = 'Uploaded: ' + d.url;
+          if (!el('p-work-type').value) {
+            el('p-work-type').value = /\.pdf$/i.test(d.url) ? 'pdf' : 'video';
+          }
+          setStatus('Work file uploaded', 'success');
+        })
+        .catch(function (err) {
+          el('p-work-file-name').textContent = '';
+          setStatus(err.message, 'error');
+        });
+    });
 
     el('add-paragraph').addEventListener('click', function () {
       content.about.paragraphs = readTextRepeater('about-paragraphs');

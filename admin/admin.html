@@ -193,9 +193,25 @@
         </div>
         <label>Full content</label>
         <div id="p-detail-editor"></div>
-        <label>Optional external link (Google Doc, Drive, etc.)
-          <input type="text" id="p-detail-external" placeholder="https://..." />
+
+        <hr />
+        <h3>The Work (actual deliverable)</h3>
+        <label>Work type
+          <select id="p-work-type">
+            <option value="">None</option>
+            <option value="article">Published article (link)</option>
+            <option value="youtube">YouTube video (link)</option>
+            <option value="video">Video file (upload .mp4)</option>
+            <option value="pdf">PDF document (upload .pdf)</option>
+          </select>
         </label>
+        <label>Work URL / link
+          <input type="text" id="p-work-url" placeholder="https://...  or  /uploads/work/file.pdf" />
+        </label>
+        <div class="image-upload">
+          <input type="file" id="p-work-file" accept=".pdf,video/mp4,video/webm,video/quicktime" />
+          <span id="p-work-file-name" class="status"></span>
+        </div>
       </div>
       <div class="modal-foot">
         <button class="btn btn-ghost" id="modal-cancel" type="button">Cancel</button>

@@ -18,7 +18,16 @@ const {
   UPLOADS_URL_PREFIX,
   MAX_UPLOAD_BYTES,
   ALLOWED_IMAGE_MIME_TYPES,
+  MAX_WORK_UPLOAD_BYTES,
+  ALLOWED_WORK_MIME_TYPES,
 } = require('../config');
+
+/**
+ * Subfolder (within the uploads dir) where project work files are stored,
+ * keeping deliverables (PDFs/videos) separate from thumbnail images.
+ * @type {string}
+ */
+const WORK_SUBDIR = 'work';
 
 /**
  * Sanitises an original filename into a safe, lowercase base name.
@@ -76,6 +85,44 @@ const upload = multer({
 });
 
 /**
+ * Multer storage for work files: writes into the uploads/work subdirectory.
+ * @type {import('multer').StorageEngine}
+ */
+const workStorage = multer.diskStorage({
+  destination(req, file, cb) {
+    const dir = path.join(UPLOADS_DIR, WORK_SUBDIR);
+    fs.mkdirSync(dir, { recursive: true });
+    cb(null, dir);
+  },
+  filename(req, file, cb) {
+    const safe = safeBaseName(file.originalname);
+    cb(null, `${Date.now()}-${safe}`);
+  },
+});
+
+/**
+ * Multer file filter that accepts only allowed work file types (PDF/video).
+ *
+ * @param {import('express').Request} req Incoming request.
+ * @param {Express.Multer.File} file The file being filtered.
+ * @param {import('multer').FileFilterCallback} cb Filter callback.
+ * @returns {void}
+ */
+function workFilter(req, file, cb) {
+  if (ALLOWED_WORK_MIME_TYPES.includes(file.mimetype)) {
+    cb(null, true);
+  } else {
+    cb(new Error('Unsupported file type. Please upload a PDF or video.'));
+  }
+}
+
+const workUpload = multer({
+  storage: workStorage,
+  fileFilter: workFilter,
+  limits: { fileSize: MAX_WORK_UPLOAD_BYTES },
+});
+
+/**
  * Creates and returns the upload API router.
  *
  * @returns {import('express').Router} Configured Express router.
@@ -92,6 +139,19 @@ function createUploadRouter() {
         return res.status(400).json({ error: 'No file uploaded' });
       }
       const url = `${UPLOADS_URL_PREFIX}/${req.file.filename}`;
+      res.json({ ok: true, url });
+    });
+  });
+
+  router.post('/upload-file', (req, res) => {
+    workUpload.single('file')(req, res, (err) => {
+      if (err) {
+        return res.status(400).json({ error: err.message });
+      }
+      if (!req.file) {
+        return res.status(400).json({ error: 'No file uploaded' });
+      }
+      const url = `${UPLOADS_URL_PREFIX}/${WORK_SUBDIR}/${req.file.filename}`;
       res.json({ ok: true, url });
     });
   });

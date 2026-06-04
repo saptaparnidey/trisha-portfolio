@@ -50,7 +50,37 @@
         <div class="project-body">
             <%- (project.detail && project.detail.bodyHtml) ? project.detail.bodyHtml : '' %>
         </div>
-        <% if (project.detail && project.detail.externalLink) { %>
+        <% var work = project.detail && project.detail.work; %>
+        <% if (work && work.url) { %>
+        <div class="project-work">
+            <h3 class="project-work-title">The Work</h3>
+            <% if (work.type === 'video') { %>
+            <video class="work-video" controls preload="metadata" src="<%= work.url %>"></video>
+            <div class="project-work-actions">
+                <a href="<%= work.url %>" target="_blank" class="btn btn-secondary">Open video in new tab</a>
+            </div>
+            <% } else if (work.type === 'pdf') { %>
+            <div class="work-pdf-wrapper">
+                <iframe class="work-pdf" src="<%= work.url %>" title="<%= project.title %> document"></iframe>
+            </div>
+            <div class="project-work-actions">
+                <a href="<%= work.url %>" target="_blank" class="btn btn-primary">Open / download document</a>
+            </div>
+            <% } else if (work.type === 'youtube') { %>
+            <% var ytId = work.url.split('youtu.be/')[1] || (work.url.split('v=')[1] || '').split('&')[0]; %>
+            <div class="work-embed">
+                <iframe src="https://www.youtube.com/embed/<%= ytId %>" title="<%= project.title %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="project-work-actions">
+                <a href="<%= work.url %>" target="_blank" class="btn btn-secondary">Watch on YouTube</a>
+            </div>
+            <% } else { %>
+            <div class="project-work-actions">
+                <a href="<%= work.url %>" target="_blank" class="btn btn-primary">Read the full published article</a>
+            </div>
+            <% } %>
+        </div>
+        <% } else if (project.detail && project.detail.externalLink) { %>
         <div class="project-external">
             <a href="<%= project.detail.externalLink %>" target="_blank" class="btn btn-primary">View Full Project</a>
         </div>

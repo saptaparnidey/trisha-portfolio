@@ -122,6 +122,26 @@ const ALLOWED_IMAGE_MIME_TYPES = [
 ];
 
 /**
+ * Maximum accepted work-file upload size in bytes (50 MB).
+ * Work files (PDFs, short videos showcasing actual work) are larger than the
+ * thumbnail images, so they get their own, more generous limit.
+ * @type {number}
+ */
+const MAX_WORK_UPLOAD_BYTES = 50 * 1024 * 1024;
+
+/**
+ * MIME types accepted for project "work" files (the actual deliverables shown
+ * on each project's detail page): documents and short videos.
+ * @type {string[]}
+ */
+const ALLOWED_WORK_MIME_TYPES = [
+  'application/pdf',
+  'video/mp4',
+  'video/webm',
+  'video/quicktime',
+];
+
+/**
  * Session cookie lifetime in milliseconds (7 days).
  * Keeps the admin logged in across visits without being indefinite.
  * @type {number}
@@ -163,6 +183,8 @@ module.exports = {
   PROJECTS_SUBDIR,
   MAX_UPLOAD_BYTES,
   ALLOWED_IMAGE_MIME_TYPES,
+  MAX_WORK_UPLOAD_BYTES,
+  ALLOWED_WORK_MIME_TYPES,
   SESSION_MAX_AGE_MS,
   BCRYPT_SALT_ROUNDS,
   ENV,

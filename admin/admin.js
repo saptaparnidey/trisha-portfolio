@@ -464,7 +464,10 @@
           return res.json();
         })
         .then(function (d) {
-          setStatus('Published ' + d.pages + ' pages', 'success');
+          setStatus(
+            'Published ' + d.pages + ' pages locally. Push to GitHub for live site: git add data/content.json public/uploads/ && git push',
+            'success',
+          );
         })
         .catch(function (err) {
           setStatus(err.message, 'error');

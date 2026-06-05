@@ -3,7 +3,15 @@ node_modules/
 dist/
 public/uploads/*
 !public/uploads/.gitkeep
-# Work deliverables (PDFs/videos) must be in git so Netlify can copy them into dist/.
+# Thumbnail/profile images uploaded via the admin panel must be in git so
+# Netlify can copy them into dist/ during the build.
+!public/uploads/*.png
+!public/uploads/*.jpg
+!public/uploads/*.jpeg
+!public/uploads/*.webp
+!public/uploads/*.gif
+!public/uploads/*.svg
+# Work deliverables (PDFs/videos) uploaded via the admin panel.
 !public/uploads/work/
 !public/uploads/work/**
 *.log

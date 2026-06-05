@@ -147,10 +147,26 @@ Edit in admin panel  →  Save  →  Publish (locally)  →  git push  →  Netl
 | Changed | Commit this |
 | --- | --- |
 | Text, projects, contact info | `data/content.json` |
-| New uploaded images | `public/uploads/` (new files) |
+| New uploaded images (thumbnails, profile photo) | `public/uploads/*.png` etc. |
 | New work PDFs/videos | `public/uploads/work/` |
 
-You do **not** commit `dist/` — Netlify generates it during the build.
+**Important:** If you upload a new thumbnail or image in the admin panel, the file
+is saved locally in `public/uploads/`. You **must** include it in your git push,
+otherwise the live Netlify site will show a broken image (the text updates in
+`content.json` will go live, but the image file will be missing).
+
+Always run:
+```bash
+git add data/content.json public/uploads/
+git status   # confirm new image files appear under "Changes to be committed"
+git commit -m "Update portfolio content [Cursor]"
+git push origin main
+```
+
+Or use the helper to check for missing uploads before pushing:
+```bash
+npm run check-deploy
+```
 
 ### Alternative: deploy from your machine (no Git push)
 

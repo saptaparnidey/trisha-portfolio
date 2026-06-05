@@ -13,7 +13,8 @@
     "netlify-login": "netlify login",
     "netlify-link": "netlify link",
     "deploy": "npm run publish-site && netlify deploy --prod --dir=dist",
-    "deploy:draft": "npm run publish-site && netlify deploy --dir=dist"
+    "deploy:draft": "npm run publish-site && netlify deploy --dir=dist",
+    "check-deploy": "node scripts/check-deploy.js"
   },
   "keywords": [
     "portfolio",

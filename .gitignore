@@ -3,6 +3,9 @@ node_modules/
 dist/
 public/uploads/*
 !public/uploads/.gitkeep
+# Work deliverables (PDFs/videos) must be in git so Netlify can copy them into dist/.
+!public/uploads/work/
+!public/uploads/work/**
 *.log
 .server.pid
 server.log

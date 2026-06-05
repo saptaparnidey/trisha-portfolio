@@ -1,17 +1,16 @@
-# Netlify configuration for the generated static portfolio site.
+# Netlify configuration for the Trisha Halder portfolio.
 #
-# The admin panel (Express server) is NOT deployed here. We only publish the
-# pre-generated static output in dist/. Regenerate it locally with
-# "npm run publish-site" (or the admin panel's Publish button) before deploying.
+# Netlify builds the static site from source on every Git push:
+#   1. npm install
+#   2. npm run publish-site  (generates dist/ from data/content.json + templates)
+#   3. Netlify publishes the dist/ folder
+#
+# The admin panel (Express server) is NOT deployed to Netlify.
+# Trisha edits locally, then pushes to GitHub to update the live site.
 
 [build]
-  # Folder that gets uploaded as the live site.
+  command = "npm run publish-site"
   publish = "dist"
-  # No build runs on Netlify; dist/ is generated locally and uploaded as-is.
-  command = ""
 
-# Send unknown paths to a simple 404 instead of breaking navigation.
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 404
+[build.environment]
+  NODE_VERSION = "20"

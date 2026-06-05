@@ -81,39 +81,86 @@ button does the same thing). The `dist/` folder is fully standalone:
 Deploy the contents of `dist/` to any static host (Netlify, Vercel, GitHub Pages,
 S3, Nginx, etc.). The generated files contain no admin code.
 
-## Deploying to Netlify
+## Deploying to Netlify (via GitHub — recommended)
 
-The site is wired to deploy the static `dist/` folder to Netlify. The admin
-panel stays on your machine; only `dist/` goes public.
+The live site is built automatically by Netlify from your GitHub repo. You do
+**not** upload folders manually.
 
-### One-time setup
+### Why the first deploy failed
 
-```bash
-# 1. Log in to your Netlify account (opens a browser)
-npm run netlify-login
+Netlify was configured to publish the `dist/` folder, but:
 
-# 2. Link this project to a Netlify site
-#    Choose "Create & configure a new site" the first time.
-npm run netlify-link
+1. `dist/` is generated locally and is **not** stored in Git.
+2. The build command was empty, so Netlify never ran the site generator.
+3. Project work files (PDFs/videos) were git-ignored, so they would be missing
+   even if the build ran.
+
+This is now fixed in `netlify.toml`: Netlify runs `npm run publish-site` on every
+push, which generates `dist/` from `data/content.json` and copies work files from
+`public/uploads/work/`.
+
+### One-time setup: connect GitHub to Netlify
+
+1. Push this repo to GitHub (if not already):
+   ```bash
+   git add .
+   git commit -m "Fix Netlify build and track work files for deploy [Cursor]"
+   git push origin main
+   ```
+
+2. In the [Netlify dashboard](https://app.netlify.com/):
+   - Click **Add new site** → **Import an existing project**
+   - Choose **GitHub** and authorize Netlify
+   - Select the repo: `saptaparnidey/trisha-portfolio`
+   - Netlify reads settings from `netlify.toml` automatically:
+     - **Build command:** `npm run publish-site`
+     - **Publish directory:** `dist`
+     - **Node version:** 20
+   - Click **Deploy site**
+
+3. Delete or ignore any site you created by manually uploading a folder. Use
+   the Git-connected site instead.
+
+Your site URL will look like: `https://dainty-druid-13dc1f.netlify.app`
+
+### Every time Trisha updates content (ongoing workflow)
+
+```
+Edit in admin panel  →  Save  →  Publish (locally)  →  git push  →  Netlify rebuilds
 ```
 
-### Every time you want to publish changes
+1. Start the admin server: `npm start`
+2. Edit content at `http://localhost:3000/admin`
+3. Click **Save & Publish** (regenerates `dist/` locally for preview)
+4. Commit and push the changed source files to GitHub:
+   ```bash
+   git add data/content.json public/uploads/
+   git commit -m "Update portfolio content [Cursor]"
+   git push origin main
+   ```
+5. Netlify automatically detects the push, runs the build, and updates the live
+   site in ~1–2 minutes. Check progress under **Deploys** in the Netlify
+   dashboard.
 
-The flow is: edit in the admin panel -> Publish -> deploy.
+**What to commit after edits:**
+
+| Changed | Commit this |
+| --- | --- |
+| Text, projects, contact info | `data/content.json` |
+| New uploaded images | `public/uploads/` (new files) |
+| New work PDFs/videos | `public/uploads/work/` |
+
+You do **not** commit `dist/` — Netlify generates it during the build.
+
+### Alternative: deploy from your machine (no Git push)
+
+If you want to deploy without pushing to GitHub:
 
 ```bash
-npm run deploy
+npm run netlify-login   # one-time
+npm run netlify-link    # one-time, link to your Netlify site
+npm run deploy          # regenerate dist/ and upload to Netlify
 ```
-
-This regenerates `dist/` and uploads it to your live Netlify URL. After it
-finishes, the CLI prints the public URL (e.g. `https://your-site.netlify.app`) -
-that is the link to add to your LinkedIn profile.
-
-Other options:
-
-- `npm run deploy:draft` - uploads to a temporary preview URL (does not change
-  the live site) so you can review before going live.
-- Prefer no CLI? Drag the `dist/` folder onto <https://app.netlify.com/drop>.
 
 ## Project layout
 

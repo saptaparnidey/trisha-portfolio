@@ -314,6 +314,12 @@
             box-shadow: 0 12px 40px rgba(0,0,0,0.15);
         }
 
+        .card-image-link {
+            display: block;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
         .card-image {
             width: 100%;
             height: 250px;
@@ -416,30 +422,68 @@
         }
 
         .contact-card {
-            background: var(--bg-light);
-            padding: 2rem;
-            border-radius: 15px;
-            min-width: 280px;
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            text-align: left;
+            background: var(--bg-white);
+            padding: 1.75rem 2rem;
+            border-radius: 18px;
+            min-width: 320px;
+            text-decoration: none;
             transition: all 0.3s ease;
-            border: 2px solid transparent;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.05);
         }
 
         .contact-card:hover {
-            border-color: var(--accent-color);
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(232,93,117,0.18);
+            border-color: transparent;
         }
 
-        .contact-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
+        .contact-icon {
+            flex-shrink: 0;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--accent-color);
+            color: #fff;
+            box-shadow: 0 6px 18px rgba(232,93,117,0.35);
+            transition: transform 0.3s ease;
         }
 
-        .contact-card a {
+        .contact-card:hover .contact-icon {
+            transform: scale(1.08) rotate(-4deg);
+        }
+
+        .contact-icon svg {
+            width: 26px;
+            height: 26px;
+        }
+
+        .contact-card-body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-label {
+            color: var(--text-light);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.35rem;
+        }
+
+        .contact-value {
             color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 500;
+            font-size: 1.1rem;
+            font-weight: 600;
+            word-break: break-word;
         }
 
         .social-links {

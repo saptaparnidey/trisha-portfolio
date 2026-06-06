@@ -88,6 +88,8 @@ async function generateSite() {
     hero: content.hero,
     about: content.about,
     portfolio: content.portfolio,
+    clients: content.clients || { heading: 'My Clients', subheading: '', items: [] },
+    resume: content.resume || { heading: 'My Resume', subheading: '', items: [] },
     contact: content.contact,
     footer: content.footer,
     projectsSubdir: PROJECTS_SUBDIR,

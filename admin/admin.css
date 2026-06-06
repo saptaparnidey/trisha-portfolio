@@ -342,15 +342,28 @@ input[type='file'] {
 
 .image-upload {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-top: 0.35rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.thumbnail-field label {
+  margin-bottom: 0;
+}
+
+.thumbnail-field > label + input[type='text'] {
+  margin-top: 0.35rem;
+  margin-bottom: 0.75rem;
 }
 
 .img-preview {
-  width: 90px;
-  height: 70px;
-  object-fit: cover;
+  width: 100%;
+  max-width: 280px;
+  height: 160px;
+  object-fit: contain;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background: var(--bg);
@@ -358,7 +371,13 @@ input[type='file'] {
 
 .img-preview:not([src]),
 .img-preview[src=''] {
-  visibility: hidden;
+  display: none;
+}
+
+.image-upload input[type='file'] {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.5rem 0;
 }
 
 /* ---------- Portfolio list ---------- */
@@ -510,4 +529,10 @@ input[type='file'] {
 .ql-container {
   min-height: 160px;
   font-size: 1rem;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0 0 1rem;
 }

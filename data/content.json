@@ -307,6 +307,40 @@
       }
     ]
   },
+  "clients": {
+    "heading": "My Clients",
+    "subheading": "Brands and organizations I've had the pleasure of working with",
+    "items": [
+      {
+        "id": "care-hospitals",
+        "name": "CARE Hospitals",
+        "category": "Content Writing",
+        "description": "CARE Hospitals",
+        "thumbnail": "/uploads/1780725480778-care-hospitals-chandrasekharpur-bhubanes.jpg",
+        "thumbnailAlt": "CARE Hospitals"
+      },
+      {
+        "id": "gleneagles-hospitals",
+        "name": "Gleneagles Hospitals",
+        "category": "YouTube Video Content",
+        "description": "Gleneagles Hospitals",
+        "thumbnail": "/uploads/1780726046550-presentation1.jpg",
+        "thumbnailAlt": "Gleneagles Hospitals"
+      }
+    ]
+  },
+  "resume": {
+    "heading": "My Resume",
+    "subheading": "Download my latest resume",
+    "items": [
+      {
+        "id": "trisha-halder-resume",
+        "label": "Trisha Halder - Resume",
+        "fileUrl": "/uploads/work/trisha-halder-resume.pdf",
+        "fileName": "Trisha_Halder_Resume.pdf"
+      }
+    ]
+  },
   "contact": {
     "heading": "Let's Work Together",
     "subtext": "Ready to create compelling content that ranks and resonates? Get in touch!",

@@ -72,6 +72,22 @@ function createContentRouter() {
         }
         usedSlugs.add(project.slug);
       }
+      const usedClientIds = new Set();
+      for (const client of (incoming.clients && incoming.clients.items) || []) {
+        if (!client.id) {
+          client.id = uniqueSlug(client.name || 'client', usedClientIds);
+        }
+        usedClientIds.add(client.id);
+      }
+      if (incoming.resume && incoming.resume.items) {
+        const usedResumeIds = new Set();
+        for (const item of incoming.resume.items) {
+          if (!item.id) {
+            item.id = uniqueSlug(item.label || item.fileName || 'resume', usedResumeIds);
+          }
+          usedResumeIds.add(item.id);
+        }
+      }
       writeContent(incoming);
       res.json({ ok: true });
     } catch (err) {

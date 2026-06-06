@@ -25,6 +25,8 @@
     <button class="tab active" data-tab="hero" type="button">Hero / Bio</button>
     <button class="tab" data-tab="about" type="button">About Me</button>
     <button class="tab" data-tab="portfolio" type="button">Portfolio</button>
+    <button class="tab" data-tab="clients" type="button">My Clients</button>
+    <button class="tab" data-tab="resume" type="button">Resume</button>
     <button class="tab" data-tab="contact" type="button">Contact</button>
   </nav>
 
@@ -103,6 +105,41 @@
         <button class="btn btn-primary" id="add-project" type="button">+ Add Project</button>
       </div>
       <div id="project-list" class="project-list"></div>
+    </section>
+
+    <!-- CLIENTS -->
+    <section class="panel" data-panel="clients">
+      <h2>My Clients</h2>
+      <label>Section heading
+        <input type="text" id="clients-heading" />
+      </label>
+      <label>Section subheading
+        <input type="text" id="clients-subheading" />
+      </label>
+
+      <div class="portfolio-toolbar">
+        <h3>Clients</h3>
+        <button class="btn btn-primary" id="add-client" type="button">+ Add Client</button>
+      </div>
+      <div id="client-list" class="project-list"></div>
+    </section>
+
+    <!-- RESUME -->
+    <section class="panel" data-panel="resume">
+      <h2>Resume</h2>
+      <label>Section heading
+        <input type="text" id="resume-heading" />
+      </label>
+      <label>Section subheading
+        <input type="text" id="resume-subheading" />
+      </label>
+
+      <div class="portfolio-toolbar">
+        <h3>Resume files</h3>
+        <button class="btn btn-primary" id="add-resume" type="button">+ Add Resume</button>
+      </div>
+      <p class="hint">The most recently added resume is shown on the site. Upload a new PDF to replace what visitors see.</p>
+      <div id="resume-list" class="project-list"></div>
     </section>
 
     <!-- CONTACT -->
@@ -216,6 +253,54 @@
       <div class="modal-foot">
         <button class="btn btn-ghost" id="modal-cancel" type="button">Cancel</button>
         <button class="btn btn-primary" id="modal-apply" type="button">Apply</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLIENT DETAIL MODAL -->
+  <div id="client-modal" class="modal" hidden>
+    <div class="modal-card">
+      <div class="modal-head">
+        <h2 id="client-modal-title">Edit Client</h2>
+        <button class="modal-close" id="client-modal-close" type="button">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <label>Client name
+            <input type="text" id="c-name" />
+          </label>
+          <label>Category
+            <input type="text" id="c-category" list="client-category-list" placeholder="e.g. Content Writing" />
+            <datalist id="client-category-list">
+              <option value="Content Writing"></option>
+              <option value="Copywriting"></option>
+              <option value="SEO Content"></option>
+              <option value="Blog Content"></option>
+              <option value="Content Strategy"></option>
+              <option value="Email Marketing"></option>
+              <option value="Social Media"></option>
+              <option value="YouTube Optimization"></option>
+            </datalist>
+          </label>
+        </div>
+        <label>Description (shown on the card)
+          <textarea id="c-description" rows="3"></textarea>
+        </label>
+        <div class="thumbnail-field">
+          <label for="c-thumbnail">Thumbnail / logo</label>
+          <input type="text" id="c-thumbnail" placeholder="Image URL" />
+          <div class="image-upload">
+            <img id="c-thumbnail-preview" class="img-preview" alt="" />
+            <input type="file" id="c-thumbnail-file" accept="image/*" />
+          </div>
+        </div>
+        <label for="c-thumbnail-alt">Thumbnail alt text
+          <input type="text" id="c-thumbnail-alt" />
+        </label>
+      </div>
+      <div class="modal-foot">
+        <button class="btn btn-ghost" id="client-modal-cancel" type="button">Cancel</button>
+        <button class="btn btn-primary" id="client-modal-apply" type="button">Apply</button>
       </div>
     </div>
   </div>

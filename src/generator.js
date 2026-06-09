@@ -21,6 +21,7 @@ const {
   UPLOADS_URL_PREFIX,
 } = require('./config');
 const { readContent } = require('./content-store');
+const { extractYouTubeVideoId, buildYouTubeEmbedUrl } = require('./utils/youtube');
 
 /**
  * Relative path prefix from a project detail page back to the site root.
@@ -103,6 +104,8 @@ async function generateSite() {
       footer: content.footer,
       project,
       rootPrefix: PROJECT_ROOT_PREFIX,
+      extractYouTubeVideoId,
+      buildYouTubeEmbedUrl,
     });
     fs.writeFileSync(
       path.join(projectsDir, `${project.slug}.html`),

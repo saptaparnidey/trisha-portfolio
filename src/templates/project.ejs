@@ -69,10 +69,12 @@
                 <a href="<%= work.url %>" target="_blank" class="btn btn-primary">Open / download document</a>
             </div>
             <% } else if (work.type === 'youtube') { %>
-            <% var ytId = work.url.split('youtu.be/')[1] || (work.url.split('v=')[1] || '').split('&')[0]; %>
+            <% var ytEmbedUrl = buildYouTubeEmbedUrl(work.url); %>
+            <% if (ytEmbedUrl) { %>
             <div class="work-embed">
-                <iframe src="https://www.youtube.com/embed/<%= ytId %>" title="<%= project.title %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="<%= ytEmbedUrl %>" title="<%= project.title %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
+            <% } %>
             <div class="project-work-actions">
                 <a href="<%= work.url %>" target="_blank" class="btn btn-secondary">Watch on YouTube</a>
             </div>

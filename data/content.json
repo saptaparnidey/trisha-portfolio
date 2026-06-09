@@ -6,7 +6,7 @@
   "hero": {
     "name": "Hi! I am Trisha",
     "subtitle": "Content Writer based in Bangalore",
-    "description": "I help write compelling content with proper keywords so they can rank on Google pages. As a dedicated and versatile content writer with a strong background in English Literature, I bring a rich understanding of language and storytelling to every project. My experience spans academic content, SEO content, and blog writing, allowing me to create compelling and optimized materials that engage diverse audiences.",
+    "description": "I help write compelling content with proper keywords so they can rank on Google pages. As a dedicated and versatile content writer with a strong background in English Literature, I bring a rich understanding of language and storytelling to every project. My experience spans academic content, SEO content, blog writing, and website content allowing me to create compelling and optimized materials that engage diverse audiences.",
     "primaryBtn": {
       "label": "View My Work",
       "href": "#portfolio"
@@ -32,11 +32,14 @@
       "Content Strategy",
       "Email Marketing",
       "Social Media",
-      "Keyword Research"
+      "Keyword Research",
+      "YouTube Content",
+      "SEO Optimization",
+      "Content Researh"
     ]
   },
   "portfolio": {
-    "heading": "My Portfolio",
+    "heading": "See My Content in Action",
     "subheading": "A showcase of my content creation across various formats and industries",
     "projects": [
       {
@@ -45,12 +48,12 @@
         "category": "Copywriting",
         "title": "UNICEF Campaign",
         "description": "Impactful copywriting for a humanitarian cause, focusing on emotional connection and call-to-action.",
-        "cardImage": "/uploads/1780583152096-logo-signature-container-square-centered.png",
+        "cardImage": "/uploads/1780728776416-unicef.jpeg",
         "cardImageAlt": "UNICEF Children Campaign",
         "detail": {
-          "heroImage": "/uploads/1780583168659-logo-signature-container-square-centered.png",
+          "heroImage": "/uploads/1780729345854-unicef.jpeg",
           "intro": "Impactful copywriting for a humanitarian cause, focusing on emotional connection and call-to-action.",
-          "bodyHtml": "<h3>About the project</h3><p>This is a copywriting project provided by TTT Academy where I had to showcase my skill of writing for a non-profit organization.</p><h3>The Problem</h3><p>Write ‘an ad’ that helps raise money for the children of Gaza. </p><p>It could be a carousel, a video, a GIF, or anything else you can think of. The one thing it needs to do is convince your followers on Instagram, or connections on LinkedIn to donate.</p><h3>The  Method</h3><ul><li>Researched UNICEF to understand their tone and style.</li><li>Researched the current situation of Gaza children and what UNICEF is doing for them</li><li>Created a video ad on Canva using a similar tone and style to UNICEF</li><li>Also added subtitles for better understanding and convenience. </li></ul>",
+          "bodyHtml": "<h3>About the project</h3><p>This is a copywriting project provided by TTT Academy where I had to showcase my skill of writing for a non-profit organization.</p><p><strong>Objectives</strong></p><ol><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span>To write ‘an ad’ that helps raise money for the children of Gaza. </li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span>To make a carousel, or a video, or a GIF, or anything else with a strong impact</li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span>To increase followers on Instagram, or connections on LinkedIn to donate.</li></ol><h3><br></h3><p><br></p>",
           "externalLink": "",
           "work": {
             "type": "video",
@@ -69,7 +72,7 @@
         "detail": {
           "heroImage": "https://images.pexels.com/photos/2955820/pexels-photo-2955820.jpeg?auto=compress&cs=tinysrgb&w=1200",
           "intro": "Appetizing and engaging copy for food products, designed to drive sales and brand affinity.",
-          "bodyHtml": "<h3>About the project</h3><p>This is a copywriting project provided by TTT Academy where I had to showcase my skill of creating an engaging copy.</p><h3>The Problem</h3><p>Recreating a Krispy Kreme copy to make it interesting.</p><h3>The  Method</h3><ul><li>Researched Krispy Kreme to understand their tone and style.</li><li>Started with a controversial statement to grab attention. </li><li>Created a long-form copy to mimic the style of the company. </li></ul>",
+          "bodyHtml": "<h3>About the project</h3><p>This is a copywriting project provided by TTT Academy where I had to showcase my skill of creating an engaging copy.</p><h3>The Objective</h3><p>To Recreate a Krispy Kreme copy to make it unique and interesting</p>",
           "externalLink": "",
           "work": {
             "type": "pdf",
@@ -83,12 +86,12 @@
         "category": "YouTube Optimization",
         "title": "Video Content Strategy",
         "description": "SEO-optimized video titles, descriptions, and tags to maximize YouTube reach and engagement.",
-        "cardImage": "https://images.pexels.com/photos/5081930/pexels-photo-5081930.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "cardImage": "/uploads/1780729053960-youtube.jpeg",
         "cardImageAlt": "YouTube Optimization Swiggy",
         "detail": {
           "heroImage": "https://images.pexels.com/photos/5081930/pexels-photo-5081930.jpeg?auto=compress&cs=tinysrgb&w=1200",
           "intro": "SEO-optimized video titles, descriptions, and tags to maximize YouTube reach and engagement.",
-          "bodyHtml": "<h3>About the project</h3><p>As a part of the video assignment in TTT Academy (A Content Writing course I was enrolled to), I have created this video optimization strategy deck for <a href=\"https://www.youtube.com/watch?v=3ZvIeLR1F2w\" target=\"_blank\" rel=\"noopener\">this </a>YouTube video.</p><h3>The problem</h3><ul><li>Write a title and create a thumbnail for <a href=\"https://youtu.be/3ZvIeLR1F2w\" target=\"_blank\" rel=\"noopener\">this video</a> using these 3 elements: subject, graphic, and text.</li><li>Detail the optimization strategy you’ll use to promote the video.</li></ul><h3>The Method Used</h3><ul><li>Thoroughly researched about YouTube video optimization</li><li>Applied VidIQ for Title and Caption Optimization</li><li>Used proper keywords to enhance reach</li><li>Listed effective promotional strategies to attract the attention of the viewers. </li><li>Created the deck on Canva to make it presentable and attractive</li></ul>",
+          "bodyHtml": "<h3>About the project</h3><p>As a part of the video assignment in TTT Academy (A Content Writing course I was enrolled to), I have created this video optimization strategy deck for <a href=\"https://www.youtube.com/watch?v=3ZvIeLR1F2w\" target=\"_blank\" rel=\"noopener\">this </a>YouTube video.</p><h3>The Objectives</h3><ol><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span>To increase visibility </li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span>To chane the thumbnail to make it more interesting</li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span>To improve the video title and description for a better optimization</li></ol>",
           "externalLink": "",
           "work": {
             "type": "pdf",
@@ -107,7 +110,7 @@
         "detail": {
           "heroImage": "https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=1200",
           "intro": "Complete video content project including scripting, optimization, and engagement strategies.",
-          "bodyHtml": "<h3>About the project</h3><p>Another video assignment I have successfully completed in TTT Academy.</p><h3>The problem</h3><p>To create a 5-7 minute YouTube video following the tone and appearance of Headspace videos.</p><h3>Method</h3><ul><li>Binge watched Headspace videos to capture their style and tone </li><li>Used Clipchamp to create the video </li><li>Wrote a script for the video</li><li>Used AI to create a voiceover</li><li>Used proper keywords and hashtags</li><li>Used Canva to create a relevant thumbnail for the vidoe</li></ul>",
+          "bodyHtml": "<h3>About the project</h3><p>Another video assignment I have successfully completed in TTT Academy.</p><h3>The Objective</h3><p>To create a 5-7 minute YouTube video following the tone and appearance of Headspace videos.</p>",
           "externalLink": "",
           "work": {
             "type": "youtube",
@@ -126,7 +129,7 @@
         "detail": {
           "heroImage": "https://images.pexels.com/photos/4348078/pexels-photo-4348078.jpeg?auto=compress&cs=tinysrgb&w=1200",
           "intro": "Conversion-focused email marketing campaigns including abandoned cart recovery strategies.",
-          "bodyHtml": "<h3>About the project</h3><p>This was a Digital Marketing assignment at TTT Academy which I have successfully completed.  </p><h3>The problem</h3><p>Create a 3-step email marketing sequence for an abandoned cart for TTT Academy. Identify the stages of the funnel you’re writing the email sequences for.</p><h3>Method</h3><ul><li>Researched the content of TTT Academy to understand its tone and style </li><li>Researched abandoned cart email content and timing</li><li>Selected the proper stages of the funnel </li><li>Used Canva to create a deck</li></ul>",
+          "bodyHtml": "<h3>About the project</h3><p>This was a Digital Marketing assignment at TTT Academy which I have successfully completed.  </p><h3>The Objectives</h3><ol><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span>To create a 3-step email marketing sequence for an abandoned cart for TTT Academy. </li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span>To Identify the stages of the funnel for the email sequences.</li></ol><p><br></p>",
           "externalLink": "",
           "work": {
             "type": "pdf",
@@ -145,7 +148,7 @@
         "detail": {
           "heroImage": "https://images.pexels.com/photos/3756879/pexels-photo-3756879.jpeg?auto=compress&cs=tinysrgb&w=1200",
           "intro": "Engaging social media content and marketing strategies for Instagram Reels and posts.",
-          "bodyHtml": "<h3>About the project</h3><p>Another assignment I have completed for a Digital Marketing masterclass at TTT Academy. Here I was able to show my expertise in creating promotional video content. I have created an Instagram reel advertisement to promote the service of Audible.</p><h3>The Problem</h3><p>For one stage of the funnel (awareness, consideration, conversion, and retargeting), create paid ads for Audible on one platform of your choice</p><h3>Method</h3><ul><li>Researched Audible and the brand’s Instagram Marketing strategies to understand the style and tone.</li><li>Prepared a script for the advertisement.</li><li>Used Canva to create the reel</li><li>Added royalty free music to match the vibe of the advertisement.</li></ul>",
+          "bodyHtml": "<h3>About the project</h3><p>Another assignment I have completed for a Digital Marketing masterclass at TTT Academy. Here I was able to show my expertise in creating promotional video content. I have created an Instagram reel advertisement to promote the service of Audible.</p><h3>The Objective</h3><p>For one stage of the funnel (awareness, consideration, conversion, and retargeting), creating paid ads for Audible on one platform of choice</p><p><br></p>",
           "externalLink": "",
           "work": {
             "type": "video",
@@ -164,7 +167,7 @@
         "detail": {
           "heroImage": "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1200",
           "intro": "Strategic marketing campaign content leveraging current trends and topical relevance.",
-          "bodyHtml": "<h3>About the project</h3><p>This was an assignment at TTT Academy that enabled me to showcase my expertise on Topical Marketing Campaigns. </p><h3>The Problem</h3><p>Identify a trend from Twitter and ideate a social media topical campaign for Airbnb using two or more of the following: tastemakers, unexpectedness and communities of participation.</p><h3>Method</h3><ul><li>Researched on trending topics on Twitter (X)</li><li>Identified an appropriate trend that can be merged with the business strategy of Airbnb.</li><li>Researched about the tone and and style of Airbnb campaigns</li><li>Used Canva to created a deck proposing the campaign</li></ul>",
+          "bodyHtml": "<h3>About the project</h3><p>This was an assignment at TTT Academy that enabled me to showcase my expertise on Topical Marketing Campaigns. </p><h3>The Objective</h3><p>To Identify a trend from Twitter and ideate a social media topical campaign for Airbnb using two or more of the following: tastemakers, unexpectedness and communities of participation.</p><p><br></p>",
           "externalLink": "",
           "work": {
             "type": "pdf",
@@ -183,7 +186,7 @@
         "detail": {
           "heroImage": "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1200",
           "intro": "Comprehensive content strategy and marketing plan with detailed implementation roadmap.",
-          "bodyHtml": "<h3>About the project</h3><p>This assignment at TTT Academy allowed me to showcase my understanding of the content strategy of popular brands. I have chosen Starbucks for this project to highlight their changing strategies for the Indian market. </p><h3>The Problem</h3><p>Find 1 brand that has changed strategy to adapt to their new market and research what steps they took to reflect their changed positioning. Make it into a 10-slide deck.</p><h3>Method</h3><ul><li>Thoroughly researched on Starbucks- it’s history and initial strategies</li><li>Researched about the entry of Starbucks in the Indian market.</li><li>Focused on key challenges the brand has faced</li><li>Understood the reason behind their changed strategies</li><li>Used Canva to create a deck with relevant images and design to make it attention grabbing. </li></ul>",
+          "bodyHtml": "<h3>About the project</h3><p>This assignment at TTT Academy allowed me to showcase my understanding of the content strategy of popular brands. I have chosen Starbucks for this project to highlight their changing strategies for the Indian market. </p><h3>The Objective</h3><ol><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span>To find 1 brand that has changed strategy to adapt to their new market and research what steps they took to reflect their changed positioning</li><li data-list=\"bullet\"><span class=\"ql-ui\" contenteditable=\"false\"></span>To Make it into a 10-slide deck.</li></ol><p><br></p>",
           "externalLink": "",
           "work": {
             "type": "pdf",
@@ -304,6 +307,44 @@
             "url": "https://load2learn.org.uk/controller-special-settings-uggcontroman/"
           }
         }
+      },
+      {
+        "id": "medical-and-healthcare-blog",
+        "slug": "medical-and-healthcare-blog",
+        "category": "Healthcare SEO Content",
+        "title": "Medical and Healthcare Blog",
+        "description": "An informative healthcare article explaining the causes, symptoms, risks, treatment, and prevention of preterm birth for expecting parents.",
+        "cardImage": "/uploads/1780732068389-premature.webp",
+        "cardImageAlt": "Preterm Birth",
+        "detail": {
+          "heroImage": "/uploads/1780732074810-premature.webp",
+          "intro": "An informative healthcare article explaining the causes, symptoms, risks, treatment, and prevention of preterm birth for expecting parents.",
+          "bodyHtml": "<p>This project involved creating an informative healthcare article on preterm birth, aimed at educating expecting parents about its causes, warning signs, complications, and preventive measures. The content was carefully structured to simplify complex medical information while maintaining accuracy, making it accessible and actionable for a general audience.</p><p>The complete, published article is available at the link below.</p>",
+          "externalLink": "",
+          "work": {
+            "type": "article",
+            "url": "https://www.carehospitals.com/blog-detail/preterm-birth/"
+          }
+        }
+      },
+      {
+        "id": "doctor-video",
+        "slug": "doctor-video",
+        "category": "Healthcare YouTube Video Content ",
+        "title": "Doctor Video",
+        "description": "An informative healthcare video highlighting varicocele embolization as a safe, non-surgical solution for male infertility",
+        "cardImage": "/uploads/1780737397059-male-infertility.jpg",
+        "cardImageAlt": "Varicocele Embolization ",
+        "detail": {
+          "heroImage": "/uploads/1780737401113-male-infertility.jpg",
+          "intro": "An informative healthcare video highlighting varicocele embolization as a safe, non-surgical solution for male infertility.",
+          "bodyHtml": "<p>This project involved scripting and optimizing content for an educational healthcare video focused on varicocele and its impact on male fertility. The objective was to translate complex medical concepts into clear, patient-friendly language while highlighting varicocele embolization as a safe and minimally invasive treatment option. The content was designed to improve awareness, engagement, and understanding among a broad audience.</p>",
+          "externalLink": "",
+          "work": {
+            "type": "youtube",
+            "url": "https://www.youtube.com/shorts/qz4yxt0nbOc"
+          }
+        }
       }
     ]
   },
@@ -314,8 +355,8 @@
       {
         "id": "care-hospitals",
         "name": "CARE Hospitals",
-        "category": "Content Writing",
-        "description": "CARE Hospitals",
+        "category": "Content Writing and SEO",
+        "description": "Content Writing | Blog content | Landing Page Content | YouTube Video Updation | Podcast Updation | Doctor Profile Updation | Quora question ans answers | Blog Optimization | Meta Tags Generation | Interliking and Schema",
         "thumbnail": "/uploads/1780725480778-care-hospitals-chandrasekharpur-bhubanes.jpg",
         "thumbnailAlt": "CARE Hospitals"
       },
@@ -323,9 +364,17 @@
         "id": "gleneagles-hospitals",
         "name": "Gleneagles Hospitals",
         "category": "YouTube Video Content",
-        "description": "Gleneagles Hospitals",
+        "description": "YouTube Video Content | YouTube Vidoe Updation | Blog Updation",
         "thumbnail": "/uploads/1780726046550-presentation1.jpg",
         "thumbnailAlt": "Gleneagles Hospitals"
+      },
+      {
+        "id": "sakra-world-hospitals",
+        "name": "Sakra World Hospitals",
+        "category": "Content Writing",
+        "description": "Content writing for blogs | Content Updation | Doctor Profile Updation",
+        "thumbnail": "/uploads/1780921375588-sakra-logo.jpg",
+        "thumbnailAlt": "Sakra World Hospitals"
       }
     ]
   },
@@ -335,8 +384,8 @@
     "items": [
       {
         "id": "trisha-halder-resume",
-        "label": "Trisha Halder - Resume",
-        "fileUrl": "/uploads/work/trisha-halder-resume.pdf",
+        "label": "Trisha_Halder_Resume",
+        "fileUrl": "/uploads/work/1780921893789-trisha-halder-resume.pdf",
         "fileName": "Trisha_Halder_Resume.pdf"
       }
     ]
